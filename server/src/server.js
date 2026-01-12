@@ -15,6 +15,9 @@ app.use("/api/paste", pasteRoutes);
 app.get("/", (_, res) => {
   res.json({ ok: true });
 });
+app.get("/healthz",(_,res)=> {
+    res.status(200).json({"ok":true});
+})
 
 const PORT = process.env.PORT || 4000;
 
