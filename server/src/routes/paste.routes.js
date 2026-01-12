@@ -43,7 +43,7 @@ router.post("/", async (req, res) => {
 
     res.status(201).json({
       id,
-      url: `http://localhost:5173/paste/${id}`,
+      url: `${process.env.FRONTEND_URL}/paste/${id}`,
     });
   } catch (err) {
     console.error("CREATE PASTE ERROR:", err);
